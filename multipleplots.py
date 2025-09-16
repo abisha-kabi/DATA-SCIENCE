@@ -1,0 +1,15 @@
+import matplotlib.pyplot as plt
+import numpy as np
+x = np.linspace(0, 10, 100)
+fig, axs = plt.subplots(2, 2, figsize=(10, 8))
+axs[0, 0].plot(x, np.sin(x), 'r')
+axs[0, 0].set_title('Sine Wave')
+axs[0, 1].plot(x, np.cos(x), 'g')
+axs[0, 1].set_title('Cosine Wave')
+axs[1, 0].plot(x, np.tan(x), 'b')
+axs[1, 0].set_ylim(-10, 10)
+axs[1, 0].set_title('Tangent Wave')
+axs[1, 1].plot(x, np.exp(-x), 'm')
+axs[1, 1].set_title('Exponential Decay')
+plt.tight_layout(rect=[0, 0, 1, 0.96])
+plt.show()
